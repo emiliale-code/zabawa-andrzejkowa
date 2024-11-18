@@ -1,0 +1,194 @@
+/* Ensure font loads */
+@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Montserrat:wght@100..900&display=swap");
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.5;
+  color: rgb(61, 61, 61);
+}
+.yellowStripe {
+  background-color: #fee601;
+  height: 5px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.topHeader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 60px;
+  background-color: #2d2e37;
+  color: rgb(255, 255, 255);
+  padding: 0 20px;
+}
+
+.logoAndrzejki {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.naviText {
+  font-size: 1rem;
+}
+
+.mainSection {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  backdrop-filter: blur(10px);
+  flex-direction: column;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  z-index: -1;
+  background-color: #2d2e37;
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 2;
+  width: 80%;
+  max-width: 1000px;
+  padding: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.86);
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.paragrafWrozby {
+  margin-bottom: 20px;
+}
+
+.pytaniaAndrzejkowe {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.generatorWrozb {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrappingBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.generateButton {
+  background-color: rgb(100, 99, 99);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.generateButton:hover {
+  background-color: rgb(61, 61, 61);
+}
+
+.fortuneOutput {
+  margin-top: 20px;
+  font-size: 1rem;
+  font-style: italic;
+  color: #444;
+  text-align: center;
+  /*word-wrap: break-word; */
+  max-width: 90%;
+}
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 0.8rem;
+  color: #888;
+  background-color: #2d2e37;
+  border-top: 1px solid #444;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .mainSection {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .contentWrapper {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .naglowekMain {
+    font-size: 2rem;
+  }
+
+  .paragrafWrozby {
+    font-size: 1rem;
+  }
+
+  .generateButton {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  .fortuneOutput {
+    font-size: 0.9rem;
+  }
+
+  .yellowStripe {
+    height: 3px;
+  }
+  .topHeader {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .naviText {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .logoAndrzejki {
+    width: 40px;
+    height: 40px;
+  }
+}

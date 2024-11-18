@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✨ Andrzejkowy Generator Wróżb ✨</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="topHeader">
+      <img
+        src="photos/pixlr-image-generator-b43d6fa8-224a-4659-a04d-4dd7c14ec53a.png"
+        class="logoAndrzejki"
+        alt="magic ball with EY colors"
+      />
+      <p class="naviText">Wróżby andrzejkowe z HRE</p>
+    </div>
+
+    <section class="yellowStripe"></section>
+
+    <section class="mainSection">
+      <img
+        src="/photos/pixlr-image-generator-2ee6a769-60d2-41ef-a8ef-ef8826a106b7.png"
+        alt="Background"
+        class="backgroundImage"
+      />
+
+      <div class="contentWrapper">
+        <!-- Text Overlay -->
+        <div class="textOverlay">
+          <h1 class="naglowekMain">
+            🎩 Wejdź do świata magicznych przepowiedni!
+          </h1>
+          <p class="paragrafWrozby">
+            Duchy kariery, biznesowe elfy i szefowskie wróżki czekają, by
+            zdradzić Ci tajemnice Twojej zawodowej przyszłości! 🕯️ Wystarczy
+            jedno klikniecie, a nasz andrzejkowy generator odkryje przed Tobą,
+            co przyniosą nadchodzące miesiące... albo przynajmniej jakiś dobry
+            powód do śmiechu. 😄
+          </p>
+          <p class="paragrafWrozby"><strong>🔮 Co Cię czeka?</strong></p>
+          <ul class="pytaniaAndrzejkowe">
+            <li class="pytaniaMain">🚀 Awans czy przerwa na kawę?</li>
+            <li class="pytaniaMain">💸 Podwyżka czy dodatkowy projekt?</li>
+            <li class="pytaniaMain">
+              🎯 Nowa inspiracja czy zaproszenie na kolejny call?
+            </li>
+          </ul>
+          <p class="paragrafWrozby">
+            👉 Kliknij przycisk poniżej i sprawdź swoją wróżbę! Nie gwarantujemy
+            trafności, ale dobrej zabawy – pewne na 100%! 🎉
+          </p>
+          <p class="uwagaWrozby">
+            <small>
+              <strong> ⚠️Uwaga</strong>: Wróżby generowane losowo, HRE nie
+              bierze za nie odpowiedzialności 😉</small
+            >
+          </p>
+        </div>
+
+        <!-- Generator Section -->
+        <div class="generatorWrozb">
+          <div class="wrappingBox">
+            <button onclick="predictFuture()" class="generateButton">
+              🔮 Odkryj swoją wróżbę!
+            </button>
+            <p id="fortuneText" class="fortuneOutput">
+              Kliknij przycisk, aby poznać swoją przyszłość!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skrypt JavaScript -->
+      <script>
+        function predictFuture() {
+          // Lista wróżb
+          const fortunes = [
+            "Twój laptop na pewno nie padnie... do końca tygodnia.",
+            "Czeka Cię projekt, który zmieni wszystko… przynajmniej dla klienta.",
+            "Szef zauważy Twoje zaangażowanie… ale po dwóch kawach.",
+            "Twój pomysł na callu zostanie przyjęty… ciszą, jak zwykle.",
+            "Ktoś w biurze podzieli się z Tobą ciastkiem. Tylko czekaj cierpliwie.",
+            "Przerwa na kawę przeciągnie się… o 5 minut, ale warto.",
+            "Nowy projekt sprawi, że poczujesz się jak superbohater – bez peleryny.",
+            "Zgubisz długopis, ale znajdziesz nową inspirację.",
+            "Twoja lista zadań skurczy się szybciej, niż myślisz!",
+            "Dzień bez problemów z internetem? To właśnie ten dzień!",
+            "Otrzymasz maila z podziękowaniami… może nawet od szefa.",
+            "Ktoś doceni Twoje memy w Slacku – to Twój czas!",
+            "Przypadkowo wyślesz maila bez załącznika, ale wszystko się ułoży.",
+            "Twój komputer przestanie się zawieszać… na chwilę.",
+            "Twoje żarty biurowe będą hitem tygodnia – przynajmniej dla Ciebie.",
+            "Zaskoczysz wszystkich swoją kreatywnością podczas burzy mózgów.",
+            "Twoja prezentacja pójdzie lepiej, niż zaplanowałeś!",
+            "Znajdziesz idealny pretekst na przerwę – gratulacje!",
+            "Twoja praca zespołowa zaowocuje… kawą od kolegi.",
+            "Ktoś zapomni wyciszyć mikrofon na spotkaniu. Będzie zabawnie.",
+            "Twój nowy task okaże się mniej skomplikowany, niż wyglądał.",
+            "Wylosujesz najlepsze miejsce w biurze podczas reorganizacji.",
+            "Twoje żółte karteczki zaczną działać jak zaklęcia produktywności.",
+            "Uda Ci się ominąć korek na porannym Teamsie.",
+            "Twój dowcip o Excelu zostanie zapamiętany na długo.",
+            "Ktoś w biurze podzieli się swoją dostawą lunchu.",
+            "Twoje statystyki w raporcie zrobią wrażenie – i to nie tylko na Tobie!",
+            "Podczas spotkania odkryjesz idealny moment na wyłączenie kamery.",
+            "Ktoś w pracy przyniesie ciasto. Będzie pysznie.",
+            "Twoja kreatywność zaskoczy nawet Ciebie samego!",
+            "Zapomnisz, o co chodziło w mailu… ale odpowiedź przyjdzie sama.",
+            "Twój plan na weekend zrobi wrażenie podczas small talku.",
+            "Wszystkie deadline'y okażą się mniej straszne, niż się wydawały.",
+            "Twoje poczucie humoru rozjaśni atmosferę w biurze.",
+            "Twój ulubiony kubek nie zniknie ze zmywarki – to znak!",
+            "Dostaniesz losowy, ale miły komplement od współpracownika.",
+            "Twój zespół zaskoczy Cię dobrym pomysłem na kolejnym spotkaniu.",
+            "Ktoś zada pytanie, na które będziesz znać odpowiedź. Poczujesz się jak ekspert!",
+            "Zobaczysz mema, który poprawi Ci humor na cały dzień.",
+            "Wszystkie Twoje hasła do systemów będą działać bez problemu!",
+          ];
+
+          // Losowanie wróżby
+          const randomIndex = Math.floor(Math.random() * fortunes.length);
+          const chosenFortune = fortunes[randomIndex];
+
+          // Zmiana tekstu w elemencie o id 'fortuneText'
+          document.getElementById("fortuneText").innerHTML = chosenFortune;
+        }
+      </script>
+    </section>
+    <footer class="footer">
+      <p>Done by Emilia from HRE. No rights reserved.</p>
+    </footer>
+  </body>
+</html>
