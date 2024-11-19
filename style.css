@@ -222,22 +222,49 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+/* Target small phones like Huawei Mate 20 Lite in portrait */
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  body {
+    font-size: 13px;
+    padding: 10px;
+  }
+
   .topHeader {
     flex-direction: column;
     align-items: center;
+    padding: 5px;
   }
 
   .logoAndrzejki {
+    width: 40px;
+    height: 40px;
     margin-bottom: 10px;
   }
 
   .generateButton {
-    font-size: 0.8rem;
-    padding: 8px 12px;
+    font-size: 0.9rem;
+    padding: 8px 10px;
   }
 
   .fortuneOutput {
     font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+/* Target small phones in landscape */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  body {
+    font-size: 14px;
+  }
+
+  .contentWrapper {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .generateButton {
+    padding: 10px 20px;
+    font-size: 1rem;
   }
 }
