@@ -42,10 +42,17 @@ body {
   font-size: 1rem;
 }
 
+.naglowekMain {
+  margin: 0 auto;
+  padding: 10px 0; /* Add padding to prevent clipping */
+  font-size: 2.5rem; /* Adjust font size for smaller viewports */
+}
+
 .mainSection {
-  position: relative;
-  height: 100dvh;
-  width: 100vw;
+  padding-top: env(
+    safe-area-inset-top
+  ); /* Ensures compatibility with the notch */
+  min-height: calc(100vh - 1px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,7 +144,7 @@ body {
   color: #888;
   background-color: #2d2e37;
   border-top: 1px solid #444;
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
 }
@@ -266,5 +273,11 @@ body {
   .generateButton {
     padding: 10px 20px;
     font-size: 1rem;
+  }
+
+  @media screen and (max-width: 375px) {
+    .naglowekMain {
+      font-size: 1.8rem; /* Reduce the font size for iPhone SE */
+    }
   }
 }
