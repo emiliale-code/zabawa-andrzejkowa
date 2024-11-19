@@ -22,6 +22,7 @@ body {
 }
 .topHeader {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
@@ -52,6 +53,7 @@ body {
   /*background-color: rgba(255, 255, 255, 0.8);*/
   backdrop-filter: blur(10px);
   flex-direction: column;
+  padding: 20px;
 }
 
 .backgroundImage {
@@ -76,6 +78,7 @@ body {
   background: rgba(255, 255, 255, 0.86);
   border-radius: 20px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+  margin: 20px auto;
 }
 
 .paragrafWrozby {
@@ -143,17 +146,43 @@ body {
   margin: 0;
 }
 
+#fortuneText {
+  font-size: 1.2rem; /* Adjust the size as needed */
+  font-weight: bold; /* Make the text bold */
+  color: #333; /* Set a color for better readability */
+  text-align: center; /* Center the text */
+  margin-top: 20px; /* Add space above */
+}
+
 /* Responsive Adjustments */
-@media (max-width: 768px) {
-  .mainSection {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px;
   }
 
   .contentWrapper {
     width: 90%;
     padding: 15px;
+  }
+
+  .naglowekMain {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .mainSection {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .contentWrapper {
+    width: 100%;
+    padding: 10px;
   }
 
   .naglowekMain {
@@ -165,8 +194,8 @@ body {
   }
 
   .generateButton {
-    font-size: 0.9rem;
-    padding: 8px 15px;
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 
   .fortuneOutput {
@@ -176,8 +205,8 @@ body {
   .yellowStripe {
     height: 3px;
   }
+
   .topHeader {
-    flex-wrap: wrap;
     justify-content: center;
     padding: 10px;
   }
@@ -190,5 +219,25 @@ body {
   .logoAndrzejki {
     width: 40px;
     height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topHeader {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logoAndrzejki {
+    margin-bottom: 10px;
+  }
+
+  .generateButton {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
+  .fortuneOutput {
+    font-size: 0.8rem;
   }
 }
