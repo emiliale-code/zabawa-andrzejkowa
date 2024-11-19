@@ -60,21 +60,16 @@ body {
   padding-top: env(safe-area-inset-top); /* Compatibility with the notch */
   min-height: calc(
     100vh - 60px
-  ); /* Ensure it fills the viewport minus header/footer height */
+  ); /* Fills the viewport minus header/footer height */
   display: flex;
   flex-direction: column; /* Maintain vertical layout */
-  justify-content: space-between; /* Distribute content properly */
+  justify-content: center; /* Center content */
   align-items: center;
-  overflow: hidden; /* Prevent scrolling due to extra space */
-  padding: 20px; /* Inner spacing for content */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Optional: Re-enable for clarity */
-  backdrop-filter: blur(10px); /* Keep the blur effect */
-  box-sizing: border-box; /* Ensure padding is included in height/width calculations */
+  overflow: hidden; /* Prevent accidental scrolling */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Background with transparency */
+  backdrop-filter: blur(10px);
+  box-sizing: border-box; /* Ensure padding is included in height calculations */
 }
 
 .backgroundImage {
@@ -151,6 +146,7 @@ body {
   max-width: 90%;
 }
 .footer {
+  height: 60px;
   width: 100%;
   text-align: center;
   padding: 5px 0;
