@@ -132,7 +132,7 @@ body {
 .footer {
   width: 100%;
   text-align: center;
-  padding: 5px 0;
+  padding: 3px 0;
   font-size: 0.8rem;
   color: #888;
   background-color: #2d2e37;
@@ -152,4 +152,133 @@ body {
   color: #333; /* Set a color for better readability */
   text-align: center; /* Center the text */
   margin-top: 20px; /* Add space above */
+}
+/* Small smartphones (portrait and landscape) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  .topHeader {
+    height: 50px;
+    padding: 0 10px;
+  }
+  .logoAndrzejki {
+    width: 40px;
+    height: 40px;
+  }
+  .contentWrapper {
+    width: 90%;
+    padding: 10px;
+  }
+  .generateButton {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  #fortuneText {
+    font-size: 1rem;
+  }
+}
+
+/* Smartphones (larger screens) */
+@media (min-width: 481px) and (max-width: 767px) {
+  body {
+    font-size: 15px;
+  }
+  .topHeader {
+    height: 55px;
+    padding: 0 15px;
+  }
+  .logoAndrzejki {
+    width: 45px;
+    height: 45px;
+  }
+  .contentWrapper {
+    width: 85%;
+    padding: 15px;
+  }
+  .generateButton {
+    padding: 10px 18px;
+    font-size: 1rem;
+  }
+  #fortuneText {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablets (portrait and landscape) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+  .topHeader {
+    height: 60px;
+    padding: 0 20px;
+  }
+  .logoAndrzejki {
+    width: 50px;
+    height: 50px;
+  }
+  .contentWrapper {
+    width: 80%;
+    padding: 20px;
+  }
+  .generateButton {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+  }
+  #fortuneText {
+    font-size: 1.2rem;
+  }
+}
+
+/* iPads (larger tablets) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  body {
+    font-size: 18px;
+  }
+  .topHeader {
+    height: 70px;
+    padding: 0 25px;
+  }
+  .logoAndrzejki {
+    width: 60px;
+    height: 60px;
+  }
+  .contentWrapper {
+    width: 70%;
+    padding: 25px;
+  }
+  .generateButton {
+    padding: 15px 25px;
+    font-size: 1.2rem;
+  }
+  #fortuneText {
+    font-size: 1.3rem;
+  }
+}
+
+/* High-resolution screens (modern smartphones and laptops) */
+@media (min-width: 1367px) {
+  body {
+    font-size: 20px;
+  }
+  .topHeader {
+    height: 80px;
+    padding: 0 30px;
+  }
+  .logoAndrzejki {
+    width: 70px;
+    height: 70px;
+  }
+  .contentWrapper {
+    width: 60%;
+    padding: 30px;
+  }
+  .generateButton {
+    padding: 18px 30px;
+    font-size: 1.3rem;
+  }
+  #fortuneText {
+    font-size: 1.5rem;
+  }
 }
