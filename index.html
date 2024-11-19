@@ -103,7 +103,7 @@
             "Twoja praca zespołowa zaowocuje… kawą od kolegi.",
             "Ktoś zapomni wyciszyć mikrofon na spotkaniu. Będzie zabawnie.",
             "Wylosujesz najlepsze miejsce w biurze podczas reorganizacji.",
-            "Twoje żółte karteczki zaczną działać jak zaklęcia produktywności.",
+            "Twoja lista to do zacznie działać jak zaklęcie produktywności.",
             "Twój dowcip o Excelu zostanie zapamiętany na długo.",
             "Ktoś w biurze podzieli się swoim lunchem.",
             "Twoje statystyki w raporcie zrobią wrażenie – i to nie tylko na Tobie!",
@@ -121,7 +121,7 @@
             "Przypadkiem wyślesz maila na 'Odpowiedz wszystkim'. Będzie hit!",
             "Znajdziesz tajemnicze ciastko w biurowej kuchni. Smacznego... chyba.",
             "Zapomnisz o ważnym zadaniu, ale okaże się, że już ktoś to zrobił!",
-            "Twój szef dziś spojrzy na Ciebie i pomyśli: 'Dobrze, że jest!",
+            "Twój szef dziś spojrzy na Ciebie i pomyśli: 'Dobrze, że jesteś!'",
             "Zdziwisz się, bo Twój Excel zadziała bez błędów za pierwszym razem.",
             "Wkrótce odkryjesz magiczny skrót klawiszowy, który zmieni Twoje życie.",
             "Na najbliższym spotkaniu Twoje 'Czy ktoś coś jeszcze?' będzie ostatnie. Wszyscy odetchną z ulgą.",
@@ -132,6 +132,7 @@
             "Twoje dziecko lub zwierzak zrobi 'gościnne wystąpienie' na wideokonferencji.",
             "Sąsiad zacznie wiercić podczas Twojej prezentacji. To nowy soundtrack Twojej kariery.",
             "Twoja kamera włączona niechcący ujawni, że masz na sobie piżamę.",
+            "Trzecia faza LMS będzie tą ostatnią.",
           ];
 
           // Losowanie wróżby
@@ -146,5 +147,16 @@
     <footer class="footer">
       <p>Done by Emilia from HRE. No rights reserved.</p>
     </footer>
+    <script>
+      function setDynamicHeight() {
+        const mainSection = document.querySelector(".mainSection");
+        if (mainSection) {
+          mainSection.style.height = `${window.innerHeight}px`;
+        }
+      }
+
+      window.addEventListener("resize", setDynamicHeight);
+      window.addEventListener("load", setDynamicHeight);
+    </script>
   </body>
 </html>
