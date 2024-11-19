@@ -13,14 +13,6 @@ body {
   line-height: 1.5;
   color: rgb(61, 61, 61);
 }
-
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 .yellowStripe {
   background-color: #fee601;
   height: 5px;
@@ -50,26 +42,18 @@ body {
   font-size: 1rem;
 }
 
-.naglowekMain {
-  margin: 0 auto;
-  padding: 10px 0; /* Add padding to prevent clipping */
-  font-size: 2.5rem; /* Adjust font size for smaller viewports */
-}
-
 .mainSection {
-  padding-top: env(safe-area-inset-top); /* Compatibility with the notch */
-  min-height: calc(
-    100vh - 60px
-  ); /* Fills the viewport minus header/footer height */
+  position: relative;
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  flex-direction: column; /* Maintain vertical layout */
-  justify-content: center; /* Center content */
+  justify-content: center;
   align-items: center;
-  overflow: hidden; /* Prevent accidental scrolling */
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* Background with transparency */
+  overflow: hidden;
+  /*background-color: rgba(255, 255, 255, 0.8);*/
   backdrop-filter: blur(10px);
-  box-sizing: border-box; /* Ensure padding is included in height calculations */
+  flex-direction: column;
+  padding: 20px;
 }
 
 .backgroundImage {
@@ -146,7 +130,6 @@ body {
   max-width: 90%;
 }
 .footer {
-  height: 60px;
   width: 100%;
   text-align: center;
   padding: 5px 0;
@@ -170,9 +153,8 @@ body {
   text-align: center; /* Center the text */
   margin-top: 20px; /* Add space above */
 }
-/* Responsive Adjustments */
 
-/* General Adjustments for Devices Up to 1024px */
+/* Responsive Adjustments */
 @media (max-width: 1024px) {
   body {
     font-size: 15px;
@@ -186,13 +168,8 @@ body {
   .naglowekMain {
     font-size: 2.2rem;
   }
-
-  .paragrafWrozby {
-    font-size: 1rem;
-  }
 }
 
-/* General Adjustments for Tablets and Devices Up to 768px */
 @media (max-width: 768px) {
   body {
     font-size: 14px;
@@ -245,37 +222,7 @@ body {
   }
 }
 
-/* Adjustments for Small Phones Like iPhone 12, iPhone 12 Pro (Width: 390px) */
-@media screen and (max-width: 390px) {
-  .naglowekMain {
-    font-size: 1.8rem;
-    line-height: 1.2;
-  }
-
-  .paragrafWrozby {
-    font-size: 0.9rem;
-  }
-
-  .generateButton {
-    font-size: 1rem;
-    padding: 10px 15px;
-  }
-
-  .contentWrapper {
-    width: 95%;
-    padding: 10px;
-  }
-
-  .fortuneOutput {
-    font-size: 0.9rem;
-  }
-
-  .naviText {
-    font-size: 0.8rem;
-  }
-}
-
-/* Small Phones in Portrait Mode */
+/* Target small phones like Huawei Mate 20 Lite in portrait */
 @media screen and (max-width: 480px) and (orientation: portrait) {
   body {
     font-size: 13px;
@@ -305,7 +252,7 @@ body {
   }
 }
 
-/* Small Phones in Landscape Mode */
+/* Target small phones in landscape */
 @media screen and (max-width: 768px) and (orientation: landscape) {
   body {
     font-size: 14px;
@@ -319,30 +266,5 @@ body {
   .generateButton {
     padding: 10px 20px;
     font-size: 1rem;
-  }
-}
-
-/* Very Small Devices (iPhone SE and Similar, Width: 375px) */
-@media screen and (max-width: 375px) {
-  .naglowekMain {
-    font-size: 1.8rem;
-  }
-
-  .paragrafWrozby {
-    font-size: 0.85rem;
-  }
-
-  .generateButton {
-    font-size: 0.9rem;
-    padding: 8px 10px;
-  }
-
-  .fortuneOutput {
-    font-size: 0.85rem;
-  }
-
-  .contentWrapper {
-    padding: 10px;
-    width: 95%;
   }
 }
